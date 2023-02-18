@@ -21,7 +21,7 @@
 
 
 
-//custom crt functions implementation
+// custom crt functions implementation
 
 void* memset(void* DestInit, int Source, size_t Size)
 {
