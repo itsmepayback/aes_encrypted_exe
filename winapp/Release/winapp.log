@@ -1,0 +1,2 @@
+﻿  LINK : /LTCG spécifié mais aucune génération de code requise ; supprimez /LTCG de la ligne de commande de l'édition de liens pour améliorer les performances de l'éditeur de liens
+  winapp.vcxproj -> C:\Users\payba\OnlineData\OneDrive\Bureau\lol\winapp\Release\winapp.exe
