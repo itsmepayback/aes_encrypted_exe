@@ -1,7 +1,6 @@
 #pragma once
 
-/* C:\codetyphon\typhonTemp\project1.exe (2023-02-15 20:12:12)
-   DébutPosition(h): 00000000, FinPosition(h): 000089FF, Longueur(h): 00008A00 */
+//open any 32 bit exe file in hxd, press ctrl + a, go in the edit menu, select copy as, C, and paste the result here.
 
 unsigned char rawData[35328] = {
 	0x4D, 0x5A, 0x90, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
