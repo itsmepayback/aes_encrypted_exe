@@ -6,7 +6,7 @@
 #include "lazy_importer.hpp"
 // https://github.com/kokke/tiny-AES-c
 #include "aes.hpp"
-//the header that contains our exe file to encrypt.
+// the header that contains our exe file to encrypt.
 #include "he.h"
 
 
