@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 
-https://github.com/JustasMasiulis/lazy_importer
+// https://github.com/JustasMasiulis/lazy_importer
 #include "lazy_importer.hpp"
-https://github.com/kokke/tiny-AES-c
+// https://github.com/kokke/tiny-AES-c
 #include "aes.hpp"
 //the header that contains our exe file to encrypt.
 #include "he.h"
